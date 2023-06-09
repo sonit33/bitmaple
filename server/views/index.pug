@@ -1,4 +1,5 @@
 extends layout
+include ./mixins/service
 
 block navbar
   .flex.flex-row.mx-auto.max-w-full.text-white.mt-2(class="lg:mt-8")
@@ -11,10 +12,10 @@ block navbar
       .text-xl Training
       .text-xl Contact Us
     .justify-end.place-items-center.flex.flex-row.w-full.content-end(class="lg:hidden basis-1/2")
-      span.material-icons.text-white-400 menu
+      span#hamburger.material-icons.text-white-400 menu
 
 block header
-  .flex.flex-row.mx-auto.max-w-full.text-white.mt-8(class="lg:mt-16")
+  .flex.flex-row.mx-auto.w-full.text-white.mt-8(class="lg:mt-16")
     .basis-auto(class="lg:basis-2/3")
       h1.font-bold.text-white-600.text-3xl(class="lg:text-6xl")
         p Unparalleled Expertise.
@@ -26,4 +27,11 @@ block header
           class="hover:text-white-500 lg:text-lg") Meet our Team
 
     .basis-0(class="lg:basis-1/3")
-      img(src="images/consulting.png", class="w-[320px] h-[320px]")
+      img.invisible(src="images/consulting.png", class="lg:w-[320px] lg:h-[320px] lg:visible")
+
+block body
+  +service("images/planning.png", "strategic planning", "Navigating Your Business to Greater Efficiency Adaptability, and Success", "With our tailored approach, we help you craft a clear roadmap to your organization's future.")
+  +service("images/ops.png", "operation excellence","Streamlining Your Business for Enhanced Quality, Efficiency, and Profitability","We identify opportunities to streamline your operations, improve productivity, and reduce costs.")
+  +service("images/transform.png", "business tranformation","Innovating and Adapting for Enhanced Competitiveness and Success","Our team will help you adapt to changing market conditions, prepare for the future, and unlock your business potential.")
+  +service("images/talent.png", "leadership and talent development", "Empowering Your Team for Innovation, Engagement, and Success.","We offer solutions for building a resilient, high-performing team that is ready to lead your business forward.")
+  +service("images/integration.png", "technology integration","Powering Your Business Towards Efficiency, Innovation, and Security.","Our experts will guide you in harnessing the power of technology to improve your business processes and provide better service to your customers.")

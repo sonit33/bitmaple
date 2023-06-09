@@ -1,0 +1,12 @@
+mixin service(image, name, title, desc)
+  .flex.flex-col.w-full.mt-16(class="lg:mt-32 lg:flex-row")
+    .place-items-center.flex(class="lg:w-[30%]")
+      img.mx-auto(src=image, class="lg:w-full w-[40%]")
+    .w-full(class="lg:pl-32")
+      p.uppercase.text-lg.text-white-400.font-light.text-center(class="lg:text-left lg:text-2xl")= name
+      p.text-2xl.text-white-600.font-bold.text-center(class="lg:text-left lg:text-3xl")= title
+      p.text-lg.text-white-500.font-bold.capitalize.mt-4.text-center(
+        class="lg:text-left lg:mt-8 lg:text-xl")= desc
+      a.text-brand.pt-4.inline-block.uppercase.flex.justify-center(
+        href="/contactus",
+        class="lg:pt-6 lg:justify-start") Learn More &rarr;
