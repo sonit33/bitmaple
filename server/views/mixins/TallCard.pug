@@ -1,0 +1,6 @@
+mixin TallCard(image, name, desc)
+  .flex.flex-col.w-full.bg-black-600.rounded-md.p-8.justify-between
+    p.uppercase.text-lg.text-white-400.font-light.text-center(class="lg:text-2xl")= name
+    p.text-lg.text-white-500.font-bold.capitalize.mt-4.text-center(class="lg:mt-8 lg:text-xl")= desc
+    .mt-8
+      img.mx-auto(src=image, class="w-[96px]")

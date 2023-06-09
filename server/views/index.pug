@@ -1,5 +1,6 @@
 extends layout
-include ./mixins/service
+include ./mixins/WideCard
+include ./mixins/TallCard
 
 block navbar
   .flex.flex-row.mx-auto.max-w-full.text-white.mt-2(class="lg:mt-8")
@@ -30,8 +31,19 @@ block header
       img.invisible(src="images/consulting.png", class="lg:w-[320px] lg:h-[320px] lg:visible")
 
 block body
-  +service("images/planning.png", "strategic planning", "Navigating Your Business to Greater Efficiency Adaptability, and Success", "With our tailored approach, we help you craft a clear roadmap to your organization's future.")
-  +service("images/ops.png", "operation excellence","Streamlining Your Business for Enhanced Quality, Efficiency, and Profitability","We identify opportunities to streamline your operations, improve productivity, and reduce costs.")
-  +service("images/transform.png", "business tranformation","Innovating and Adapting for Enhanced Competitiveness and Success","Our team will help you adapt to changing market conditions, prepare for the future, and unlock your business potential.")
-  +service("images/talent.png", "leadership and talent development", "Empowering Your Team for Innovation, Engagement, and Success.","We offer solutions for building a resilient, high-performing team that is ready to lead your business forward.")
-  +service("images/integration.png", "technology integration","Powering Your Business Towards Efficiency, Innovation, and Security.","Our experts will guide you in harnessing the power of technology to improve your business processes and provide better service to your customers.")
+  h1.font-bold.text-white-600.text-2xl.flex.justify-center.uppercase.mt-24(class="lg:text-4xl lg:mt-48") Services
+  +WideCard("images/planning.png", "strategic planning", "Navigating Your Business to Greater Efficiency Adaptability, and Success", "With our tailored approach, we help you craft a clear roadmap to your organization's future.")
+  +WideCard("images/ops.png", "operation excellence","Streamlining Your Business for Enhanced Quality, Efficiency, and Profitability","We identify opportunities to streamline your operations, improve productivity, and reduce costs.")
+  +WideCard("images/transform.png", "business tranformation","Innovating and Adapting for Enhanced Competitiveness and Success","Our team will help you adapt to changing market conditions, prepare for the future, and unlock your business potential.")
+  +WideCard("images/talent.png", "leadership and talent development", "Empowering Your Team for Innovation, Engagement, and Success.","We offer solutions for building a resilient, high-performing team that is ready to lead your business forward.")
+  +WideCard("images/integration.png", "technology integration","Powering Your Business Towards Efficiency, Innovation, and Security.","Our experts will guide you in harnessing the power of technology to improve your business processes and provide better service to your customers.")
+
+  h1.font-bold.text-white-600.text-2xl.flex.justify-center.uppercase.mt-24(class="lg:text-4xl lg:mt-48") Why choose us?
+  .flex.flex-col.gap-4.justify-evenly.mt-16(class="lg:flex-row")
+    +TallCard("images/client.png","CLIENT FOCUSED","We understand that every organization is unique. Our approach is personalized to align with your specific goals and needs.")
+    +TallCard("images/result.png","result driven","We are committed to delivering concrete results. Your success is our success.")
+    +TallCard("images/innovation.png","innovation","In the rapidly evolving business landscape, we stay ahead by continually learning and adopting innovative solutions.")
+  .flex.flex-col.gap-4.justify-evenly.mt-4(class="lg:flex-row")
+    +TallCard("images/integrity.png","Integrity","We value honesty and transparency in all our engagements. We work with the utmost integrity and respect for your business.")
+    +TallCard("images/collaboration.png","collaboration","Collaboration is at our core. We unite collective intelligence and teamwork, amplifying results by working together.")
+    +TallCard("images/resilience.png","resilience","Resilience is our response to an ever-changing business landscape. We adapt, overcome, and see every challenge as a chance for growth and learning.")
