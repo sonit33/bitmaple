@@ -1,7 +1,7 @@
 extends layout
 
 block navbar
-  .flex.flex-row.mx-auto.max-w-full.text-white.mt-8
+  .flex.flex-row.mx-auto.max-w-full.text-white.mt-2(class="lg:mt-8")
     div(class="basis-1/2")
       img(src="images/bitmaple.png", class="w-[160px] lg:w-[225px]")
     .text-white-600.hidden(
@@ -10,6 +10,8 @@ block navbar
       .text-xl Consulting
       .text-xl Training
       .text-xl Contact Us
+    .justify-end.place-items-center.flex.flex-row.w-full.content-end(class="lg:hidden basis-1/2")
+      span.material-icons.text-white-400 menu
 
 block header
   .flex.flex-row.mx-auto.max-w-full.text-white.mt-8(class="lg:mt-16")
@@ -19,7 +21,7 @@ block header
         p Unmatched Results.
       h2.text-white-500.text-base.mt-8.mr-4(class="lg:text-2xl lg:mt-16 lg:mr-8") Meet our team and explore how our expertise can help your business. Get started today
       .bg-brand.rounded-full.flex.justify-center.place-items-center.cursor-pointer.mt-4(
-        class="w-[140px] h-[40px] lg:w-[266px] lg:h-[71px] lg:mt-8")
+        class="w-[140px] h-[40px] lg:w-[250px] lg:h-[70px] lg:mt-8")
         a.uppercase.inline-block.text-black-500.font-semibold.text-md(
           class="hover:text-white-500 lg:text-lg") Meet our Team
 
