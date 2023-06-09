@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    style
+      include /css/custom.css
+    style
+      include /css/tw-output.css
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    block page-scripts
+  body.text-xs.bg-black-500.relative.max-w-full.p-4.mx-auto(
+    class="md:text-sm lg:text-base lg:max-w-6xl lg:p-0")
+    //- block content
+    block navbar
+    block header
+    block body
+    block footer
