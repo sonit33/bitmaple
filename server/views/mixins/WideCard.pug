@@ -1,4 +1,4 @@
-mixin WideCard(image, name, title, desc)
+mixin WideCard(image, name, title, desc, href)
   .flex.flex-col.w-full.mt-16(class="lg:mt-32 lg:flex-row")
     .place-items-center.flex(class="lg:w-[30%]")
       img.mx-auto(src=image, class="lg:w-full w-[40%]")
@@ -8,5 +8,5 @@ mixin WideCard(image, name, title, desc)
       p.text-lg.text-white-500.font-bold.capitalize.mt-4.text-center(
         class="lg:text-left lg:mt-8 lg:text-xl")= desc
       a.text-brand.pt-4.inline-block.uppercase.flex.justify-center(
-        href="/contactus",
+        href=href,
         class="lg:pt-6 lg:justify-start") Learn More &rarr;

@@ -1,0 +1,6 @@
+mixin Button(text, href)
+  .bg-brand.rounded-full.flex.justify-center.place-items-center.cursor-pointer.mt-4(
+    class="w-[140px] h-[40px] lg:w-[250px] lg:h-[70px] lg:mt-8")
+    a.uppercase.inline-block.text-black-500.font-semibold.text-md(
+      class="hover:text-white-500 lg:text-lg",
+      href=href)= text
