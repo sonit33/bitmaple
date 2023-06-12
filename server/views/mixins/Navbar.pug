@@ -1,0 +1,22 @@
+mixin Navbar(active)
+  .flex.flex-row.mx-auto.max-w-full.text-white.mt-2(class="lg:mt-8")
+    div(class="basis-1/2")
+      img(src="images/bitmaple.svg", class="w-[8rem] lg:w-[12rem]")
+    .text-white-600.hidden.capitalize(
+      class="basis-1/2 lg:flex lg:flex-row lg:justify-between lg:gap-4 lg:items-center")
+      if active=="publishing"
+        .text-xl.text-brand
+          a(href="/publishing") Publishing
+      else
+        .text-xl
+          a(href="/publishing") Publishing
+      if active=="consulting"
+        .text-xl.text-brand
+          a(href="/consulting") consulting
+      else
+        .text-xl
+          a(href="/consulting") consulting
+      .text-xl Training
+      .text-xl Contact Us
+    .justify-end.place-items-center.flex.flex-row.w-full.content-end(class="lg:hidden basis-1/2")
+      span#hamburger.material-icons.text-white-400 menu

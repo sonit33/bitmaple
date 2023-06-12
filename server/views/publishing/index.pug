@@ -1,0 +1,40 @@
+extends ../layout
+include ../mixins/Navbar
+include ../mixins/WideCard
+include ../mixins/TallCard
+include ../mixins/Button
+include ../mixins/Testimonial
+include ../mixins/SectionHeader
+include ../mixins/LeadText
+
+block navbar
+  +Navbar("publishing")
+
+block header
+  .flex.flex-row.mx-auto.w-full.text-white.mt-8(class="lg:mt-16")
+    .basis-auto(class="lg:basis-2/3")
+      h1.font-bold.text-white-600.text-3xl.text-center(class="lg:text-6xl lg:text-left")
+        p.capitalize write. share. inspire.
+      h2.text-white-500.text-base.mt-8.mr-4.text-center(class="lg:text-2xl lg:mt-16 lg:mr-8 lg:text-left") Unlock your storytelling potential with BitMaple.
+      p.text-white-300.mt-8 From seamless publishing and personalized prints to a community that values your creativity, we're your partner in literary success. Start your journey with us and watch your writing career flourish.
+      .flex.justify-center(class="lg:justify-start")
+        +Button("meet our team","/contactus")
+
+    .basis-0(class="lg:basis-1/3")
+      img.invisible(
+        src="images/publishing/publishing-hero.png",
+        class="lg:w-[320px] lg:h-[320px] lg:visible")
+
+block body
+  +SectionHeader("Services")
+  +WideCard("images/publishing/author.png", "Author Empowerment", "Retain creative control and rights over your work", "We respect the sanctity of your creative voice and provide a platform where you own the rights to your work. You control the narrative, always.","/contactus")
+  +WideCard("images/publishing/reading.png", "Reader Connect","Develop a direct relationship with your readers","Our platform offers interactive features like comments, likes, and shares, fostering a close-knit community of authors and readers. Share your journey, engage in discussions, and build your fanbase organically.","/contactus")
+  +WideCard("images/publishing/recognition.png", "Visibility Boost","Gain recognition and increase your readership","Leveraging sophisticated algorithms, we ensure your work is discovered by the right audience. Get spotlighted in our curated lists and gain increased exposure for your content.","/contactus")
+  +WideCard("images/publishing/journey.png", "Personalized Publishing Experience", "Enjoy a seamless, user-friendly publishing journey tailored to your needs","We provide a suite of intuitive tools and services, from customizable publishing formats to real-time analytics, designed to make your publishing process a breeze. We're with you every step of the way.","/contactus")
+  +WideCard("images/publishing/skill.png", "Literary Skill Development","Hone your craft and elevate your writing skills","Through comprehensive resources, workshops, and one-on-one authoring consultancy, we guide you on your writing journey, providing constructive feedback and actionable insights to help you continually improve and grow as an author.","/contactus")
+  +WideCard("images/publishing/monetize.png", "Monetization Opportunities","Earn from your passion and make a living from your writing","We offer various monetization features enabling authors to earn revenue from their work. From subscription models to sponsored content opportunities, we provide various avenues for you to turn your passion into profit.","/contactus")
+
+  +SectionHeader("Partner with Us")
+  +LeadText("Ready to transform your business and achieve unprecedented results? There's no time like the present to start your journey towards success. Partner with us today and let's shape the future of your business together. Click 'Contact Us' now to start a conversation. We can't wait to help you exceed your goals!")
+  .flex.justify-center.mt-8.mb-16
+    +Button("contact us","/contactus")

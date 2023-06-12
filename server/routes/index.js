@@ -10,4 +10,8 @@ router.get("/consulting", function (req, res, next) {
   res.render("consulting/index", { title: "BitMaple Consulting" });
 });
 
+router.get("/publishing", function (req, res, next) {
+  res.render("publishing/index", { title: "BitMaple Publishing" });
+});
+
 module.exports = router;
